@@ -63,14 +63,20 @@ Após logar, você será apresentado com um aviso no topo da tela:
 
 Vamos tratar destes problemas. Começando pelo mais fácil:
 
-> O usuário/senha padrão está ativo na interface de usuário do OCS-NG
+
+
+ - **O usuário/senha padrão está ativo na interface de usuário do OCS-NG**
+
+
 
 Para mudar a senha padrão do login admin, na página do OCSInventory, clique nas configurações (canto superior direito) e "Minha Conta".
 
 Na página de configuração, preencha os campos "Primeiro Nome" e "Senha".
 
 
-> Seu install.php existe em seu diretório de instalação (padrão : /usr/share/ocsinventory-reports/ocsreports).
+
+- **Seu install.php existe em seu diretório de instalação (padrão : /usr/share/ocsinventory-reports/ocsreports).**
+
 
 Para tratar deste aviso, removemos o 'install.php' da pasta do OCS:
 ```shell
@@ -78,7 +84,9 @@ $ sudo rm /usr/share/ocsinventory-reports/ocsreports/install.php
 ```
 
 
-> O usuário/senha padrão está definido no seu banco de dados: ocsweb
+ 
+
+- **O usuário/senha padrão está definido no seu banco de dados: ocsweb**
 
 Para tratar do ultimo aviso, mudamos a senha do banco 'ocsweb' criado em [2 - instalação dos modulos requeridos](2 - Instalação dos modulos requeridos pelo OCS.md):
 
