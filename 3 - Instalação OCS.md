@@ -31,6 +31,7 @@ $ sudo sh setup.sh
 Após realizar a instalação, ative o OCS e reinicialize o serviço do apache2 rodando:
 ```console
 $ sudo a2enconf ocsinventory-reports
+$ sudo a2enconf z-ocsinventory-server
 $ sudo systemctl reload apache2 && sudo systemctl restart apache2
 ```
 
