@@ -12,24 +12,24 @@ Neste passo, você deve ter um arquivo `OCSNG_UNIX_SERVER-2.12.3.tar.gz` baixado
 ### Instalando
 
 Primeiramente, descompacte o arquivo:
-```shell
+```console
 $ tar -xvzf OCSNG_UNIX_SERVER-2.12.3.tar.gz
 ```
 
 E entre na diretório do criada:
-```shell
+```console
 $ cd OCSNG_UNIX_SERVER-2.12.3.tar.gz
 ```
 
 No diretório execute o setup com:
-```shell
+```console
 $ sudo sh setup.sh
 ```
 
 > Ao executar, vários prompts vão aparecer na tela, perguntando locais de arquivos e outras configurações. É possível pressionar repetitivamente a tecla 'Enter' para aceitar as configurações padrão.
 
 Após realizar a instalação, ative o OCS e reinicialize o serviço do apache2 rodando:
-```shell
+```console
 $ sudo a2enconf ocsinventory-reports
 $ sudo systemctl reload apache2 && sudo systemctl restart apache2
 ```
@@ -79,7 +79,7 @@ Na página de configuração, preencha os campos "Primeiro Nome" e "Senha".
 
 
 Para tratar deste aviso, removemos o 'install.php' da pasta do OCS:
-```shell
+```console
 $ sudo rm /usr/share/ocsinventory-reports/ocsreports/install.php
 ```
 
@@ -91,7 +91,7 @@ $ sudo rm /usr/share/ocsinventory-reports/ocsreports/install.php
 Para tratar do ultimo aviso, mudamos a senha do banco 'ocsweb' criado em [2 - instalação dos modulos requeridos](2 - Instalação dos modulos requeridos pelo OCS.md):
 
 1. Abra uma conexão com o banco de dados:
-```shell
+```console
 $ sudo mysql -u root -p
 ```
 2. Mude a senha e usuário do banco ocsweb (Substitua USUARIO e SENHA):

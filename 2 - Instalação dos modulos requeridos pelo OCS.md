@@ -4,7 +4,7 @@ Com o Ubuntu Server rodando, vamos realizar a instalação do OCS Inventory.
 
 De antemão vamos realizar a atualização e upgrade do sistema:
 
-```shell
+```console
 $ sudo apt-get update && sudo apt-get upgrade
 ```
 
@@ -19,18 +19,18 @@ O OCS tem 4 requerimentos:
 
 Realizando a instalação:
 
-```shell
+```console
 $ sudo apt-get install apache2 php perl mariadb-server mariadb-common mariadb-client
 ```
 
 Ao fazer a instalação, o MariaDB vem sem nenhum configuração de segurança. Para remediar isto basta rodar o script (e seguir os prompts em tela):
 
-```shell
+```console
 $ sudo mysql_secure_installation
 ```
 
 Ativar mariadb:
-```shell
+```console
 $ sudo systemctl enable mariadb
 $ sudo systemctl start mariadb
 ```
@@ -38,7 +38,7 @@ $ sudo systemctl start mariadb
 Configurar mariadb:
 
 - Abra o mariadb com o comando:
-```shell
+```console
 $ sudo mysql -u root
 ```
 
@@ -61,14 +61,14 @@ No [guia de instalação do OCS](https://wiki.ocsinventory-ng.org/03.Basic-docum
 
 ### Modulos requeriods pelo "Communications Server"
 
-```shell
+```console
 $ sudo apt apt install libxml-simple-perl libdbi-perl libdbd-mysql-perl libapache-dbi-perl libnet-ip-perl libsoap-lite-perl libarchive-zip-perl make build-essential
 
 $ sudo cpan install XML::Entities Mojolicious::Lite Switch
 ```
 ### Modulos requeriods pelo "Administration console"
 
-```shell
+```console
 $ apt install php-pclzip make build-essential libdbd-mysql-perl libnet-ip-perl libxml-simple-perl php php-mbstring php-soap php-mysql php-curl php-xml php-zip php-gd
 ```
 
