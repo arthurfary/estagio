@@ -26,13 +26,22 @@ No diretório execute o setup com:
 $ sudo sh setup.sh
 ```
 
-> Ao executar, vários prompts vão aparecer na tela, perguntando locais de arquivos e outras configurações. É possivel pressinal repetitivamente a tecla 'Enter' para aceitar as configurações padrão.
+> Ao executar, vários prompts vão aparecer na tela, perguntando locais de arquivos e outras configurações. É possível pressionar repetitivamente a tecla 'Enter' para aceitar as configurações padrão.
 
-Após realizar a instalação, reinicialize o serviço do apache2 rodando:
+Após realizar a instalação, ative o OCS e reinicialize o serviço do apache2 rodando:
 ```shell
-$ sudo systemctl restart apache2
+$ sudo a2enconf ocsinventory-reports
+$ sudo systemctl reload apache2 && sudo systemctl restart apache2
 ```
-> Pode digitar `$ sudo systemctl status apache2` pare verificar se o serviço do apache está rodando normalmente.
+
+> Digite `$ sudo systemctl status apache2` pare verificar se o serviço do apache está rodando normalmente.
+
+### Configurando
+
+Com instalação completa, passamos aos passos de configuração. O serviço apache2 estará rodando uma interface em `http://IP_LOCAL_DA_MAQUINA/ocsreports`.
+
+![Painel Setup Ocs](painel_setup_ocs.png "Painel")
+
 
 
 
