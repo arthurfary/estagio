@@ -16,7 +16,7 @@ Primeiramente, descompacte o arquivo:
 $ tar -xvzf OCSNG_UNIX_SERVER-2.12.3.tar.gz
 ```
 
-E entre na diretório do criada:
+E entre na diretório do criado:
 ```console
 $ cd OCSNG_UNIX_SERVER-2.12.3.tar.gz
 ```
